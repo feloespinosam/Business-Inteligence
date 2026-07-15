@@ -1,118 +1,278 @@
-Business Intelligence - Financial Data Analysis & Visualization
-https://img.shields.io/badge/Python-100%2525-blue
-https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white
-https://img.shields.io/badge/yFinance-Data-green
+# Business Intelligence - Financial Data Analysis & Visualization
 
-This repository contains a set of tools for financial data analysis, visualization, and extraction using Python, yFinance, Streamlit, and Plotly.
+![Python](https://img.shields.io/badge/Python-100%25-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![yFinance](https://img.shields.io/badge/yFinance-Data-green)
 
-📁 Project Structure
-text
+A collection of Python tools for **financial data extraction, analysis, and visualization** using **yFinance**, **Streamlit**, **Plotly**, and **Pandas**.
+
+---
+
+## 📁 Project Structure
+
+```text
 Business-Inteligence/
+│
 ├── Financial Dashboard/
-│   └── financial_dashboard.py      # Interactive dashboard for financial statement visualization
+│   └── financial_dashboard.py
+│
 ├── Financial Data Fetcher/
-│   ├── Financial Analysis Visa.py  # Detailed financial ratio analysis and Excel export
-│   └── Financial Statements Accounts.py  # Exploration of financial statement accounts
+│   ├── Financial Analysis Visa.py
+│   └── Financial Statements Accounts.py
+│
 └── README.md
-🚀 Modules
-1. Financial Dashboard (financial_dashboard.py)
-Interactive dashboard built with Streamlit that allows you to visualize the financial statements of companies listed on the NYSE.
+```
 
-Key Features:
+---
 
-Selection of popular NYSE stocks (JPM, V, WMT, DIS, KO, MCD, PFE, GS, BRK-B, CAT)
+# 🚀 Modules
 
-Visualization of financial statements (Annual or Quarterly)
+## 📊 Financial Dashboard (`financial_dashboard.py`)
 
-Key metrics: Revenue, Net Income, Total Assets, Total Debt
+An interactive dashboard built with **Streamlit** for visualizing the financial statements of companies listed on the NYSE.
 
-Interactive charts with Plotly for revenue, net income, and operating cash flow
+### Features
 
-Detailed tables of the three main financial statements
+- Select from popular NYSE companies:
+  - JPM
+  - V
+  - WMT
+  - DIS
+  - KO
+  - MCD
+  - PFE
+  - GS
+  - BRK-B
+  - CAT
 
-Technologies: Streamlit, yFinance, Pandas, Plotly
+- View:
+  - Annual Financial Statements
+  - Quarterly Financial Statements
 
-2. Financial Data Fetcher
-A set of scripts for extracting and analyzing financial data.
+- Key financial metrics:
+  - Revenue
+  - Net Income
+  - Total Assets
+  - Total Debt
 
-a) Financial Analysis Visa.py
-Script that downloads financial data for a given ticker (default: TSLA) and generates a comprehensive financial ratio analysis exported to a professionally formatted Excel file.
+- Interactive Plotly charts:
+  - Revenue
+  - Net Income
+  - Operating Cash Flow
 
-Calculated Ratios:
+- Complete financial statements:
+  - Income Statement
+  - Balance Sheet
+  - Cash Flow Statement
 
-Liquidity: Current Ratio, Quick Ratio, Cash Ratio
+### Technologies
 
-Profitability: Gross Margin, Operating Margin, Net Profit Margin, EBITDA Margin, ROE, ROA, ROIC
+- Streamlit
+- yFinance
+- Pandas
+- Plotly
 
-Leverage: Debt to Equity, Total Debt to Assets, Interest Coverage, Financial Leverage
+---
 
-Efficiency: Asset Turnover, Inventory Turnover
+## 📈 Financial Data Fetcher
 
-Valuation: EPS (Trailing and Forward), Revenue per Share
+A collection of scripts for downloading and analyzing financial information.
 
-Growth: Revenue Growth, Earnings Growth
+---
 
-Cash Flow: Operating Cash Flow, Free Cash Flow
+### 1. Financial Analysis Visa.py
 
-Excel Format: Data is exported with accounting formats, percentages, and professional styling (fonts, borders, alignment).
+Downloads financial data for a selected ticker (default: **TSLA**) and generates a professionally formatted Excel workbook containing financial ratio analysis.
 
-Technologies: yFinance, Pandas, OpenPyXL
+### Financial Ratios
 
-b) Financial Statements Accounts.py
-Exploration script that iterates over a list of tickers (example: ['CGAU', 'GOOGL', 'GOOG', 'ABEV', 'SAN', 'BBVA', 'GMED', 'MWA', 'OHI', 'TSM']) and extracts all available accounts from the three financial statements:
+#### Liquidity
 
-Income Statement
+- Current Ratio
+- Quick Ratio
+- Cash Ratio
 
-Balance Sheet
+#### Profitability
 
-Cash Flow
+- Gross Margin
+- Operating Margin
+- Net Profit Margin
+- EBITDA Margin
+- Return on Equity (ROE)
+- Return on Assets (ROA)
+- Return on Invested Capital (ROIC)
 
-Useful for identifying which metrics are available for each company and standardizing analysis.
+#### Leverage
 
-Technologies: yFinance
+- Debt to Equity
+- Total Debt to Assets
+- Interest Coverage
+- Financial Leverage
 
-🔧 Prerequisites
-Python 3.7 or higher
+#### Efficiency
 
-Internet connection (to download data from Yahoo Finance)
+- Asset Turnover
+- Inventory Turnover
 
-📦 Installation
+#### Valuation
+
+- Trailing EPS
+- Forward EPS
+- Revenue per Share
+
+#### Growth
+
+- Revenue Growth
+- Earnings Growth
+
+#### Cash Flow
+
+- Operating Cash Flow
+- Free Cash Flow
+
+### Excel Output
+
+The generated workbook includes:
+
+- Professional formatting
+- Accounting number formats
+- Percentage formatting
+- Borders and alignment
+- Styled headers
+
+### Technologies
+
+- yFinance
+- Pandas
+- OpenPyXL
+
+---
+
+### 2. Financial Statements Accounts.py
+
+Utility script that explores all available financial statement accounts for multiple companies.
+
+Example tickers:
+
+```python
+[
+    "CGAU",
+    "GOOGL",
+    "GOOG",
+    "ABEV",
+    "SAN",
+    "BBVA",
+    "GMED",
+    "MWA",
+    "OHI",
+    "TSM"
+]
+```
+
+Extracts every available account from:
+
+- Income Statement
+- Balance Sheet
+- Cash Flow Statement
+
+Useful for:
+
+- Understanding available financial metrics
+- Standardizing company analysis
+- Exploring Yahoo Finance financial datasets
+
+### Technologies
+
+- yFinance
+
+---
+
+# 🔧 Prerequisites
+
+- Python 3.7+
+- Internet connection
+- Yahoo Finance access through yFinance
+
+---
+
+# 📦 Installation
+
 Clone the repository:
 
-bash
+```bash
 git clone https://github.com/feloespinosam/Business-Inteligence.git
 cd Business-Inteligence
-Install the required dependencies:
+```
 
-bash
+Install dependencies:
+
+```bash
 pip install streamlit yfinance pandas plotly openpyxl
-▶️ Usage
-Dashboard (Streamlit)
-bash
+```
+
+---
+
+# ▶️ Usage
+
+## Launch the Dashboard
+
+```bash
 cd "Financial Dashboard"
 streamlit run financial_dashboard.py
-Ratio Analysis (Visa/TSLA)
-bash
+```
+
+---
+
+## Run Financial Ratio Analysis
+
+```bash
 cd "Financial Data Fetcher"
 python "Financial Analysis Visa.py"
-This script will generate an Excel file with the financial ratios.
+```
 
-Account Exploration
-bash
+This script generates an Excel workbook containing the calculated financial ratios.
+
+---
+
+## Explore Financial Statement Accounts
+
+```bash
 cd "Financial Data Fetcher"
 python "Financial Statements Accounts.py"
-Prints all available accounts for the configured tickers to the console.
+```
 
-📝 Notes
-Data is fetched in real-time from Yahoo Finance using the yfinance library.
+Prints all available financial statement accounts for the configured tickers.
 
-The dashboard uses caching (@st.cache_data) to optimize performance.
+---
 
-The generated Excel files include accounting formats and professional styles for easy interpretation.
+# 📝 Notes
 
-👤 Author
-Felo Espinosa M.
-GitHub: @feloespinosam
+- Financial data is downloaded in real time from **Yahoo Finance**.
+- The dashboard uses `@st.cache_data` to improve performance.
+- Excel exports include professional accounting formatting.
+- Compatible with any ticker supported by **yFinance**.
 
-📄 License
-This project is open-source and available for educational and financial analysis purposes.
+---
+
+# 🛠 Built With
+
+- Python
+- Streamlit
+- Plotly
+- Pandas
+- yFinance
+- OpenPyXL
+
+---
+
+# 👤 Author
+
+**Felo Espinosa M.**
+
+GitHub: **[@feloespinosam](https://github.com/feloespinosam)**
+
+---
+
+# 📄 License
+
+This project is open-source and intended for **educational purposes** and **financial analysis**.
